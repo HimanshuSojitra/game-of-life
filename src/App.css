@@ -1,0 +1,49 @@
+:root {
+  --cell-size: 15px;
+  --grid-border: 1px solid #CCCCCC;
+  --cell-live-color: black;
+  --grid-size: 50;
+  background-color: aliceblue;
+}
+
+.App {
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-size), var(--cell-size));
+  width: fit-content;
+  margin: 0 auto;
+  border: var(--grid-border);
+  background-color: white;
+}
+
+.cell {
+  height: var(--cell-size);
+  width: var(--cell-size);
+  border: var(--grid-border);
+}
+
+.cell--alive {
+  background-color: var(--cell-live-color);
+}
+
+.right {
+  padding-left: 1rem;
+}
+
+button {
+  padding: 1rem 4rem;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 12rem;
+  display: block;
+  margin: 1rem 0;
+}
